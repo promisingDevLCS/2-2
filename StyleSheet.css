@@ -1,0 +1,88 @@
+﻿#buynstore {
+    text-align: center;
+    border: hidden;
+}
+
+body {
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none; /*하이퍼링크 글자에 생기는 밑줄을 제거*/
+    color: black;
+}
+
+.top {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif; /*폰트 스타일을 변경*/
+    text-align: center;
+}
+
+.company {
+    text-align: center;
+}
+
+div.nav_L {
+    width: 15%;
+    float: left;
+    margin-left: 20px;
+}
+
+.column_center {
+    float: left;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.item { /*테이블에 저장될 아이템*/
+    row-gap:5px;
+    padding: 20px;
+    margin: 10px;
+    border-spacing:10px 0;
+}
+
+.price{
+    color:red;
+}
+
+.nav_L {
+    height: 100%;
+}
+
+.nav_L ul {
+        letter-spacing: 2px;
+        font-size: 20px;
+        list-style: none;
+        padding: 10px;
+        border-top: solid 3px #cc0909;
+        border-bottom: solid 3px #cc0909;
+    }
+
+
+div.menubar ul {
+    list-style: none; /*글자 앞에 아무것도 붙이지 x, ex. 숫자, 로마자*/
+    text-align: center;
+    padding: 10px 10px; /* width(px) height(px) */
+    margin: 10px 10px;
+}
+
+div.menubar li {
+    display: inline; /*리스트 요소들을 수평으로 배치*/
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 30px;
+    padding: 0 10px;
+}
+
+li a:hover {
+    color: #cc0909;
+}
+
+footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}

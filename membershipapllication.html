@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>log-in</title>
+    <style>
+        body {
+            height: 100%;
+            background-color:#d9ebac
+        }
+        div#header h1.title {
+            text-align: center;
+            font-style: italic;
+            color: #ffd800;
+            font-size: 40px;
+        }
+        #agree p{
+            /*개인정보 이용 동의를 위한 안내, 애니메이션 사용*/
+            display:none;
+            background-color:inherit;
+        }
+        #agree button{
+            width:100px;
+            height:50px;
+        }
+        div.contents form {
+            background-color:#e1e6d5;
+            text-align: center;
+            margin-left: auto; margin-right: auto; width:50%;
+            padding: 10px 5px;
+            line-height:30px;   /* 라인 사이의 간격을 지정 */
+            font-size:110%;
+        }
+        div.contents label{
+            display:inline-block;
+            width:120px;
+            text-align:end;
+        }
+        div.contents input{
+            display:inline-block;
+            width:140px;
+        }
+        div.logo {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function checkPhoneNum(num, msg) {
+            var exp = /^010\d{8}$/;    // 전화번호 정규식 검증, 010- 숫자 8자리
+            if (num.value.match(exp))
+                return true;
+            else {
+                alert(msg);
+                num.focus();
+                return false;
+            }
+        }
+    </script>
+    <!-- Jquery 이용 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#showAgreement").click(function () {
+                $("#Agreement").toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <h1 class="title">회원 가입</h1>
+    </div>
+
+    <div class="contents">
+        <form>
+            <label><span style="color:red">* </span>이름: </label>
+            <input type="text" name="name" required /><br />
+
+            <label><span style="color:red">* </span>휴대폰 번호: </label>
+            <input type="tel" id="telephone" name="telephone" required />
+            <input type="button" style="width:50px;"
+                   onclick="checkPhoneNum(document.getElementById('telephone'),
+    '잘못된 번호 입력입니다!')" value="인증"/><br />
+
+            <label><span style="color:red">* </span>이메일: </label>
+            <input type="email" name="email" required /><br />
+
+            <label><span style="color:red">* </span>비밀번호: </label>
+            <input type="password" name="password" required /><br />
+
+            <label>나이: </label>
+            <input type="number" name="age" min="10" max="50" step="5"
+                   value="20" /><br />
+
+            <label style="width:250px; text-align:left;">
+                <span style="color:red">* </span>
+                개인정보 이용 동의: 동의하기
+            </label>
+            <input style="width:20px;height:20px;" type="checkbox" name="private" required />
+            <div id="agree">
+                <input type="button" id="showAgreement" value="개인정보 이용 약관" />
+                <p id="Agreement">
+                    제 1항: 개인정보 수집 사유...
+                </p><br />
+
+            </div>
+            <br /><br />
+
+            <input type="submit" name="submit" value="가입하기" />
+            <input type="reset" name="reset" value="초기화" /><br />
+        </form>
+    </div>
+
+    <div class="logo">
+        <a href="MyShop.html">
+            <img src="Logo.png" width="150" height="100" />
+        </a>
+    </div>
+
+</body>
+</html>

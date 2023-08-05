@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>장바구니</title>
+    <!-- "#" : id(유일무이) , ".xxx" : class(중복 가능) -->
+    <style>
+        *{
+            text-align:center;
+        }
+        .top {
+            font-size: 20px;
+            font-family:'Malgun Gothic'; /*폰트 스타일을 변경*/
+            text-align: center;
+        }
+        a {
+            text-decoration: none; /*하이퍼링크 글자에 생기는 밑줄을 제거*/
+            color: black;
+        }
+        a:hover{
+            color:#ffd800;
+        }
+        #number{font-size:30px;}
+        div.content table{
+            margin:10px auto;
+            width:70%;
+            border-spacing: 10px 10px;
+            border-bottom:solid;
+        }
+        .quantity {
+            width: 49px;
+            height: 100%;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function add_quantity(quan) {
+            var quantity = document.getElementById(quan).value;
+            quantity++;
+            document.getElementById(quan).value = quantity;
+        }
+        function sub_quantity(quan) {
+            var quantity = document.getElementById(quan).value;
+            if (quantity == 1) {
+                alert("1개 이상 구매해야 합니다!");
+                return;
+            }
+            quantity--;
+            document.getElementById(quan).value = quantity;
+        }
+        function remove_item(item) {
+
+        }
+    </script>
+</head>
+<body>
+    <div class="top">
+        <div>
+            <h1>
+                장바구니
+            </h1>
+        </div>
+        <div>
+            <a href="MyShop.html">
+                <h3>
+                    Home
+                </h3>
+            </a>
+        </div>
+
+        <hr />
+    </div>
+    <div class="content">
+        <table>
+            <tr>
+                <td class="number">
+                    1.
+                </td>
+                <td>
+                    <img src="car.png" width="200" height="200" />
+                </td>
+                <td>
+                    <p>
+                        가격 및 주문정보
+                    </p>
+                    <p>
+                        <span>
+                            <input type="button" name="quantity_remove" 
+                                   value="-" onclick="sub_quantity('quantity1')"/>
+                            <input type="text" id="quantity1" class="quantity" value="1" />
+                            <input type="button" name="quantity_add" 
+                                   value="+" onclick="add_quantity('quantity1')"/>
+                        </span>
+
+                    </p>
+                    <!-- 가격 및 주문정보 -->
+                </td>
+                <td>
+                    <input type="button" name="removeItem_fromBucket"
+                           value="장바구니에서 삭제" />
+                </td>
+            </tr>
+            <tr>
+                <td class="number">
+                    2.
+                </td>
+                <td>
+                    <img src="car.png" width="200" height="200" />
+                </td>
+                <td>
+                    <p>
+                        가격 및 주문정보
+                    </p>
+                    <p>
+                        <span>
+                            <input type="button" name="quantity_remove" 
+                                   value="-" onclick="sub_quantity('quantity2')" />
+                            <input type="text" id="quantity2" class="quantity" value="1" />
+                            <input type="button" name="quantity_add" 
+                                   value="+" onclick="add_quantity('quantity2')"/>
+                        </span>
+
+                    </p>
+                    <!-- 가격 및 주문정보 -->
+                </td>
+                <td>
+                    <input type="button" id="removeItem_fromBucket"
+                           value="장바구니에서 삭제" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="footer" class="logo">
+        <a href="MyShop.html">
+            <img src="Logo.png" width="150" height="100" />
+        </a>
+    </div>
+</body>
+</html>

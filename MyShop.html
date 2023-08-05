@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>LCS"S CL</title>
+    <link type="text/css" rel="stylesheet" href="main_StyleSheet.css" />
+    <script type="text/javascript" src="main_Script.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h1 class="title">
+            &nbsp;LCS'S CL에 오신 것을 환영합니다!
+        </h1>
+        <div class="search">
+            <form style="text-align:end; padding:10px">
+                <a href="장바구니.html">
+                    <input type="button" value="장바구니" />
+                </a>
+                <span>
+                    <input type="text" placeholder="검색어를 입력하세요" />
+                    <button style="background-color:#ffffff;">
+                        <img src="돋보기.png" />
+                    </button>
+                </span>
+
+            </form>
+        </div>
+    </div>
+
+    <hr style="border-color:red" />
+
+    <div class="menubar">
+        <ul class="menubar">
+            <li><a href="Mans.html">Mans</a></li>
+            <li><a href="Mans.html">Womens</a></li>
+            <li><a href="Mans.html">Sports</a></li>
+            <li><a href="Mans.html">Kids</a></li>
+            <li class="lastList"><a href="Mans.html">About us</a></li>
+        </ul>
+    </div>
+
+    <hr style="border-color:red" />
+
+    <!-- 이벤트용 게임이 들어갈 자리(카드 드래그&드롭을 통해 할인 쿠폰 증정)-->
+    <div class="game">
+        <div style="width:25%;float:left;">
+            <input type="button" value="게임하기" 
+                   style="width:100px;height:190px;"
+                   onclick="open_game()" />
+        </div>
+        <div style="width:70%;height:190px;float:right;">
+            <p id="Show_discount" style="width:90px; height:100px; 
+                    margin:auto;padding:20px;text-align:center;">
+                쿠폰 상태
+            </p>
+        </div>
+    </div>
+
+    <div class="logins">
+        <form>
+            ID: <input type="text" required /><br />
+            PW: <input type="password" required /><br />
+            <input type="submit" value="로그인" />
+            <a href="membershipapllication.html">
+                <input type="button" value="회원가입" />
+            </a>
+        </form>
+    </div>
+
+    <div id="footer" class="logo">
+        <a href="MyShop.html">
+            <img src="Logo.png" width="150" height="100" />
+        </a>
+    </div>
+
+</body>
+</html>
